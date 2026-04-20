@@ -31,24 +31,117 @@ Findings :
 gobuster dir -u http://10.49.143.115/ -w /usr/share/wordlists/dirb/big.txt
 ```
 <img width="682" height="393" alt="image" src="https://github.com/user-attachments/assets/b03ab5a7-fba6-4e82-a88e-227c660da583" />
-THERE IS MORE SCREENSHOT, BUT I FORGOT, LATER I WILL PUT
+
+<img width="1100" height="812" alt="image" src="https://github.com/user-attachments/assets/3a2e09a3-278f-402c-9336-e4efcf1548a4" />
+
+<img width="1100" height="410" alt="image" src="https://github.com/user-attachments/assets/035bcc3d-d6b6-4676-9d95-9e8e5087cb50" />
+
+- noticed a hidden codeword: vigilante (same color as the background).
+
+<img width="615" height="221" alt="image" src="https://github.com/user-attachments/assets/1c157226-dd3a-44a7-97a0-03a06d54bb53" />
+
+
 ##Step 5 — Continue bruteforcing discovered path
 - Because /island exists, run Gobuster on /island (look deeper) — authors often nest secret files.
+
 ```bash
 gobuster dir -u http://10.49.143.115/island/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 <img width="907" height="306" alt="image" src="https://github.com/user-attachments/assets/027987c8-64e7-408e-bfbc-7b042053d514" />
+
 Result found ```bash /island/2100 ```
+
+<img width="1100" height="749" alt="image" src="https://github.com/user-attachments/assets/c5430a04-fae1-444e-94ec-13c5664df56f" />
+
 - Page-Source
 
+<img width="1100" height="750" alt="image" src="https://github.com/user-attachments/assets/e6dcc600-a405-403a-92cd-1e9296e88a4b" />
+
+```bash 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 align=center>How Oliver Queen finds his way to Lian_Yu?</h1>
+
+
+<p align=center >
+<iframe width="640" height="480" src="https://www.youtube.com/embed/X8ZiFuW41yY">
+</iframe> <p>
+<!-- you can avail your .ticket here but how?   -->
+
+</header>
+</body>
+</html>
+```
+## files with the .ticket extension exist in this directory.
+
 ran Gobuster again with the file extension flag -x .ticket
+
 ```bash gobuster dir -u http://thm/island/2100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x .ticket -t 50 ```
+
 <img width="938" height="325" alt="image" src="https://github.com/user-attachments/assets/3e42bae7-8d16-4c9f-9b44-d108e752fe90" />
 
 Open: http://10.49.143.115/island/2100/green_arrow.ticket
 
+<img width="1100" height="747" alt="image" src="https://github.com/user-attachments/assets/5cc7b5d7-db35-4aa3-a2fe-512a57d38f36" />
+
+```bash 
+This is just a token to get into Queen's Gambit(Ship)
+
+RTy8yhBQdscX
+```
+
+##Step 6 — Decode the .ticket (Base58)
+
+```bash
+python3 - <<'PY'
+import base58
+print(base58.b58decode("RTy8yhBQdscX").decode())
+PY
+```
+
+<img width="416" height="102" alt="image" src="https://github.com/user-attachments/assets/98c4bcbe-2d93-42c4-9952-1f526f09732b" />
+
+##Step 7: FTP Access
+
+- logged into the FTP using vigilante as our username and the password we found
+
+```bash
+ftp 10.49.143.115
+```
+
+```bash
+username:vigilante
+password: !#th3h00d
+```
+<img width="297" height="147" alt="image" src="https://github.com/user-attachments/assets/c2eade67-d220-4b8b-b09d-fb3343461d27" />
+
+```bash
+ls
+```
+
+Output
+```bash
+229 Entering Extended Passive Mode (|||46232|).                                                                     
+150 Here comes the directory listing.                                                                               
+-rw-r--r--    1 0        0          511720 May 01  2020 Leave_me_alone.png                                          
+-rw-r--r--    1 0        0          549924 May 05  2020 Queen's_Gambit.png                                          
+-rw-r--r--    1 0        0          191026 May 01  2020 aa.jpg                                                      
+226 Directory send OK. 
+```
+get Queen's_Gambit.png 
+
+<img width="922" height="277" alt="image" src="https://github.com/user-attachments/assets/ee41915f-4057-489a-8973-46363aa8077e" />
 
 
+#ONLY 'GET' Queen's_Gambit.png BECAUSE EARLIER I ALREADY GET OTHERS FILES
+
+```bash
+exiftool info Leave_me_alone.png
+```
+
+<img width="487" height="252" alt="image" src="https://github.com/user-attachments/assets/4bad8732-ce62-4041-b238-bf5b5b734b62" />
 
 
 
