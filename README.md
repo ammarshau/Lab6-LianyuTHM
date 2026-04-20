@@ -1,7 +1,4 @@
 # Lab6-LianyuTHM
-# TryHackMe - Lian_Yu Walkthrough
-## Introduction
-This is a beginner-level CTF room on TryHackMe.
 
 ## Step 1: Reconnaissance
 
