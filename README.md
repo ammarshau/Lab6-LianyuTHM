@@ -259,7 +259,28 @@ cat user.txt
 ```
 sudo -l
 ```
+- This command lists what the current user can execute as root.
 
+<img width="860" height="115" alt="lianyu11" src="https://github.com/user-attachments/assets/d9725894-6b45-4b3b-a743-fb3777bb9dee" />
+
+- Since pkexec allows executing commands as another user, we can attempt to spawn a root shell directly.
+
+# Exploitation
+<img width="382" height="62" alt="lianyu12" src="https://github.com/user-attachments/assets/4991d3c5-634c-4002-984a-7b801464b960" />
+
+```
+ls
+```
+
+<img width="175" height="36" alt="lianyu13" src="https://github.com/user-attachments/assets/95eeb4ad-240b-4e4c-96f6-72155112940f" />
+
+```
+cat root.txt
+```
+
+<img width="747" height="237" alt="lianyu14" src="https://github.com/user-attachments/assets/e9be0838-2f39-4f91-b00b-be6e6719ca51" />
+
+## Already captured the second flag
 
 
 
