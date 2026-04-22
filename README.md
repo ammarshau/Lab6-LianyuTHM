@@ -201,15 +201,35 @@ exiftool info Leave_me_alone.png
 
 <img width="510" height="193" alt="lianyu5" src="https://github.com/user-attachments/assets/5f2629bb-419e-4031-a43d-909f160bb3b1" />
 
+# IT LOOKS LIKE THIS BEFORE :
+
+```
+┌──(mar㉿kali)-[~]
+└─$ unzip ss.zip 
+Archive:  ss.zip
+  inflating: passwd.txt              
+  inflating: shado 
+```
+
+## Reading the Files
 
 <img width="632" height="205" alt="lianyu7" src="https://github.com/user-attachments/assets/09f7ab6f-b4d0-44e2-a765-c6a25f3276c6" />
+
+- tried to get the something with 'passwd.txt'
 
 
 <img width="477" height="63" alt="lianyu6" src="https://github.com/user-attachments/assets/2904531b-d05d-4929-b100-255cacace311" />
 
+- tried on shado
+- look like a credentials for later use
 
+## Gain access
 
 <img width="536" height="331" alt="lianyu8" src="https://github.com/user-attachments/assets/de122220-8072-40a6-bc87-097902bd6174" />
+
+- checked if there is other user than vigilante
+- slade ✅
+
 
 ```ssh slade@thm```
 
