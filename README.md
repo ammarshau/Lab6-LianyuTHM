@@ -195,7 +195,10 @@ exiftool info Leave_me_alone.png
  Step 10 — Cracking aa.jpg
  
  - Try steghide with the password:
- 
+ - Enter passphrase: password
+ - file named ss.zip was extracted
+# I ALREADY DID EARLIER 
+
 <img width="510" height="193" alt="lianyu5" src="https://github.com/user-attachments/assets/5f2629bb-419e-4031-a43d-909f160bb3b1" />
 
 
