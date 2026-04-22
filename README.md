@@ -73,56 +73,75 @@ Result found ```bash /island/2100 ```
 </header>
 </body>
 </html>
+
 ```
+
 ## files with the .ticket extension exist in this directory.
 
 ran Gobuster again with the file extension flag -x .ticket
 
+
+
 ```bash gobuster dir -u http://thm/island/2100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x .ticket -t 50 ```
+
+
 
 <img width="938" height="325" alt="image" src="https://github.com/user-attachments/assets/3e42bae7-8d16-4c9f-9b44-d108e752fe90" />
 
+
 Open: http://10.49.143.115/island/2100/green_arrow.ticket
+
 
 <img width="1100" height="747" alt="image" src="https://github.com/user-attachments/assets/5cc7b5d7-db35-4aa3-a2fe-512a57d38f36" />
 
-```bash 
+
+```
 This is just a token to get into Queen's Gambit(Ship)
 
 RTy8yhBQdscX
 ```
 
-##Step 6 — Decode the .ticket (Base58)
 
-```bash
+## Step 6 — Decode the .ticket (Base58)
+
+
+```
 python3 - <<'PY'
 import base58
 print(base58.b58decode("RTy8yhBQdscX").decode())
 PY
 ```
 
+
 <img width="416" height="102" alt="image" src="https://github.com/user-attachments/assets/98c4bcbe-2d93-42c4-9952-1f526f09732b" />
 
-##Step 7: FTP Access
+
+## Step 7: FTP Access
 
 - logged into the FTP using vigilante as our username and the password we found
 
-```bash
+
+```
 ftp 10.49.143.115
 ```
 
-```bash
+
+```
 username:vigilante
 password: !#th3h00d
 ```
+
+
 <img width="297" height="147" alt="image" src="https://github.com/user-attachments/assets/c2eade67-d220-4b8b-b09d-fb3343461d27" />
 
-```bash
+```
 ls
 ```
 
+
 Output
-```bash
+
+```
 229 Entering Extended Passive Mode (|||46232|).                                                                     
 150 Here comes the directory listing.                                                                               
 -rw-r--r--    1 0        0          511720 May 01  2020 Leave_me_alone.png                                          
@@ -130,16 +149,20 @@ Output
 -rw-r--r--    1 0        0          191026 May 01  2020 aa.jpg                                                      
 226 Directory send OK. 
 ```
+
 get Queen's_Gambit.png 
+
 
 <img width="922" height="277" alt="image" src="https://github.com/user-attachments/assets/ee41915f-4057-489a-8973-46363aa8077e" />
 
 
 #ONLY 'GET' Queen's_Gambit.png BECAUSE EARLIER I ALREADY GET OTHERS FILES
 
+
 ```bash
 exiftool info Leave_me_alone.png
 ```
+
 
 <img width="487" height="252" alt="image" src="https://github.com/user-attachments/assets/4bad8732-ce62-4041-b238-bf5b5b734b62" />
 
@@ -170,7 +193,9 @@ exiftool info Leave_me_alone.png
 
 ``` ls ```
 
+
 ```cat user.txt ```
+
 
 <img width="347" height="83" alt="lianyu10" src="https://github.com/user-attachments/assets/d7963220-40f8-4a49-9621-1f94cff59395" />
 
