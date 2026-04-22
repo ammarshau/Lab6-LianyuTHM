@@ -233,19 +233,32 @@ Archive:  ss.zip
 
 ```ssh slade@thm```
 
+```
+password : M3tahuman
+```
+
 <img width="808" height="561" alt="image" src="https://github.com/user-attachments/assets/87ccf988-fd26-4c38-9a17-229917fb87f3" />
 
 
-
-``` ls ```
-
-
-```cat user.txt ```
+``` 
+ls
+```
+```
+cat user.txt
+```
 
 
 <img width="347" height="83" alt="lianyu10" src="https://github.com/user-attachments/assets/d7963220-40f8-4a49-9621-1f94cff59395" />
 
+# Captured the first flag from the box
 
+# Looking for Privilege Escalation Paths
+
+- We’re only user slade, we need to check
+  
+```
+sudo -l
+```
 
 
 
