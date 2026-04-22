@@ -27,37 +27,50 @@ Findings :
 ## Step 4 — Directory enumeration with Gobuster
 - moved to Port 80 (HTTP). Running Gobuster for directories revealed a hidden folder /island.
 
- ```bash
+ ```
 gobuster dir -u http://10.49.143.115/ -w /usr/share/wordlists/dirb/big.txt
 ```
+
 <img width="682" height="393" alt="image" src="https://github.com/user-attachments/assets/b03ab5a7-fba6-4e82-a88e-227c660da583" />
+
 
 <img width="1100" height="812" alt="image" src="https://github.com/user-attachments/assets/3a2e09a3-278f-402c-9336-e4efcf1548a4" />
 
+
 <img width="1100" height="410" alt="image" src="https://github.com/user-attachments/assets/035bcc3d-d6b6-4676-9d95-9e8e5087cb50" />
 
+
 - noticed a hidden codeword: vigilante (same color as the background).
+
 
 <img width="615" height="221" alt="image" src="https://github.com/user-attachments/assets/1c157226-dd3a-44a7-97a0-03a06d54bb53" />
 
 
-##Step 5 — Continue bruteforcing discovered path
+## Step 5 — Continue bruteforcing discovered path
 - Because /island exists, run Gobuster on /island (look deeper) — authors often nest secret files.
 
-```bash
+
+```
 gobuster dir -u http://10.49.143.115/island/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
+
+
 <img width="907" height="306" alt="image" src="https://github.com/user-attachments/assets/027987c8-64e7-408e-bfbc-7b042053d514" />
+
 
 Result found ```bash /island/2100 ```
 
+
 <img width="1100" height="749" alt="image" src="https://github.com/user-attachments/assets/c5430a04-fae1-444e-94ec-13c5664df56f" />
+
 
 - Page-Source
 
+
 <img width="1100" height="750" alt="image" src="https://github.com/user-attachments/assets/e6dcc600-a405-403a-92cd-1e9296e88a4b" />
 
-```bash 
+
+```
 <!DOCTYPE html>
 <html>
 <body>
@@ -76,13 +89,14 @@ Result found ```bash /island/2100 ```
 
 ```
 
+
 ## files with the .ticket extension exist in this directory.
 
 ran Gobuster again with the file extension flag -x .ticket
 
 
 
-```bash gobuster dir -u http://thm/island/2100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x .ticket -t 50 ```
+``` gobuster dir -u http://thm/island/2100 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x .ticket -t 50 ```
 
 
 
