@@ -185,12 +185,17 @@ exiftool info Leave_me_alone.png
 
 <img width="942" height="638" alt="lianyu 2" src="https://github.com/user-attachments/assets/0194b576-cae6-427f-bf2b-837e10b800cf" />
 
-```
-FIXED THE PNG HEADER BITS 
-```
+- FIXED THE PNG HEADER BITS 
+
 
 <img width="867" height="742" alt="lianyu4" src="https://github.com/user-attachments/assets/25cc8fff-8bc2-4900-a047-951f2e14d5a3" />
 
+- Open again -- it revealed the hidden password
+
+ Step 10 — Cracking aa.jpg
+ 
+ - Try steghide with the password:
+ 
 <img width="510" height="193" alt="lianyu5" src="https://github.com/user-attachments/assets/5f2629bb-419e-4031-a43d-909f160bb3b1" />
 
 
