@@ -233,7 +233,7 @@ Archive:  ss.zip
 
 ```ssh slade@thm```
 
-<img width="657" height="750" alt="lianyu9" src="https://github.com/user-attachments/assets/b3f2c1a8-b4a4-450e-8c95-c1ddd67b5de0" />
+<img width="808" height="561" alt="image" src="https://github.com/user-attachments/assets/87ccf988-fd26-4c38-9a17-229917fb87f3" />
 
 
 
