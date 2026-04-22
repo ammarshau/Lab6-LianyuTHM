@@ -144,6 +144,48 @@ exiftool info Leave_me_alone.png
 <img width="487" height="252" alt="image" src="https://github.com/user-attachments/assets/4bad8732-ce62-4041-b238-bf5b5b734b62" />
 
 
+<img width="867" height="742" alt="lianyu4" src="https://github.com/user-attachments/assets/25cc8fff-8bc2-4900-a047-951f2e14d5a3" />
+
+
+<img width="942" height="638" alt="lianyu 2" src="https://github.com/user-attachments/assets/0194b576-cae6-427f-bf2b-837e10b800cf" />
+
+
+<img width="510" height="193" alt="lianyu5" src="https://github.com/user-attachments/assets/5f2629bb-419e-4031-a43d-909f160bb3b1" />
+
+
+<img width="632" height="205" alt="lianyu7" src="https://github.com/user-attachments/assets/09f7ab6f-b4d0-44e2-a765-c6a25f3276c6" />
+
+
+<img width="477" height="63" alt="lianyu6" src="https://github.com/user-attachments/assets/2904531b-d05d-4929-b100-255cacace311" />
+
+
+
+<img width="536" height="331" alt="lianyu8" src="https://github.com/user-attachments/assets/de122220-8072-40a6-bc87-097902bd6174" />
+
+```ssh slade@thm```
+
+<img width="657" height="750" alt="lianyu9" src="https://github.com/user-attachments/assets/b3f2c1a8-b4a4-450e-8c95-c1ddd67b5de0" />
+
+
+
+``` ls ```
+
+```cat user.txt ```
+
+<img width="347" height="83" alt="lianyu10" src="https://github.com/user-attachments/assets/d7963220-40f8-4a49-9621-1f94cff59395" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
